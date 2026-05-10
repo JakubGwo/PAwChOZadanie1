@@ -1,0 +1,4 @@
+W katalogu screenshots znajdują się zrzuty z wykonywanymi poleceniami.
+
+1. Aplikacja została napisana w języku Go ze względu na możliwość skompilowania jej do postaci pojedynczego, statycznie linkowanego pliku binarnego. Aplikacja korzysta z zewnętrznego (darmowego) API Open-Meteo, nie wymaga kluczy dostępu, a serwer HTTP oparty jest na wbudowanej w Go bibliotece standardowej.
+2. Dockerfile wykorzystuje wieloetapowe budowanie obrazu Pierwszy etap na bazie golang:alpine służy wyłącznie do skompilowania kodu i pobrania certyfikatów HTTPS. Drugi etap oparty jest o warstwę scratch zmniejsza wagę końcowego kontenera.
